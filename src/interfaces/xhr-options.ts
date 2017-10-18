@@ -17,7 +17,7 @@ export interface XHROptions {
     [key:string]: string
   }
 
-  responseType? : string|'blob'|'json'|'text'
+  responseType? : 'blob'|'json'|'text'|"arraybuffer"
 
   data? : Buffer|string
 

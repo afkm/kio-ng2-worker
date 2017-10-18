@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [
+    "src/index.client.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/classes/worker.class.ts",
+    "src/index.ts",
+    "node_modules"
+  ]
+}

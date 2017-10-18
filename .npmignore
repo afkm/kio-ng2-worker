@@ -3,3 +3,21 @@
 *.ngfactory.ts
 
 /documentation
+
+/test-app
+
+/package
+
+/release
+
+/scripts
+
+nodemon.json
+
+karma.conf.js
+
+webpack.*.js
+
+tsconfig*.json
+
+stats.*.json
