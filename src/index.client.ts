@@ -1,4 +1,7 @@
 import { XHRWorkerClient } from './classes/client.class'
+export { XHRWorkerClient } from './classes/client.class'
+export * from './interfaces/xhr-options'
+export * from './interfaces/xhr-response'
 
 const packageInfo:any = require('./metadata.json')
 
