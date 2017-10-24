@@ -7,9 +7,15 @@ const packageInfo:any = require('./metadata.json')
 
 export const version = packageInfo.version
 
-export function createClient ( workerPath:string ) {
+const __WORKERS__:Map<string,XHRWorkerClient> = new Map()
 
-  const worker = new Worker(workerPath)
-  return new XHRWorkerClient(worker)
+export function createClient ( workerPath:string='/assets/worker.js' ) {
+
+  if ( !__WORKERS__.has(workerPath) ) {
+    const worker = new XHRWorkerClient(new Worker(workerPath))
+    __WORKERS__.set(workerPath,worker)
+  }
+
+  return __WORKERS__.get(workerPath)
 
 }
