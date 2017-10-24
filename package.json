@@ -9,7 +9,6 @@
 		"test": "karma start",
 		"test:watch": "./scripts/watch.sh test",
 		"lint": "tslint ./src/**/*.ts ./test/**/*.ts",
-		"version": "npm run build",
 		"postversion": "git push && git push --tags",
 		"update_meta": "./scripts/update_metadata.sh",
 		"predoc": "rm -rf ./documentation",
