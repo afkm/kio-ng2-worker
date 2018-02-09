@@ -1,5 +1,3 @@
-/// <reference name="node" />
-
 import { XHRWorker } from './classes/worker.class'
 //const packageInfo:any = require('../package.json')
 

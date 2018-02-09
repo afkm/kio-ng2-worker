@@ -13,7 +13,6 @@
     "update_meta": "./scripts/update_metadata.sh",
     "predoc": "rm -rf ./documentation",
     "doc": "compodoc -p ./tsconfig-doc.json -d ./documentation/",
-    "sass:build": "./scripts/compile-scss.sh ./build",
     "transpile": "npm run ngModule:build",
     "ngModule:build": "./scripts/ngModule.sh build",
     "ngModule:copy_build": "./scripts/ngModule.sh copy_build",
@@ -27,7 +26,7 @@
     "webpack:worker:watch": "webpack --config ./webpack.worker.js -w",
     "webpack:client:watch": "webpack --config ./webpack.client.js -w",
     "prebuild": "npm run update_meta",
-    "build": "npm run ngModule:copy_build && npm run sass:build && npm run ngModule:build && npm run ngModule:copy",
+    "build": "npm run webpack && rm -rf ./release",
     "build:dev": "npm run fetchdeps && NODE_ENV=production npm run build",
     "build:release": "NODE_ENV=production npm run build",
     "build:release:watch": "./scripts/watch.sh build:release"
