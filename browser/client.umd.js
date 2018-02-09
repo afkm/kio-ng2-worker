@@ -155,7 +155,7 @@ eval("\nvar root_1 = __webpack_require__(2);\nvar Symbol = root_1.root.Symbol;\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar client_class_1 = __webpack_require__(5);\nvar client_class_2 = __webpack_require__(5);\nexports.XHRWorkerClient = client_class_2.XHRWorkerClient;\nvar packageInfo = __webpack_require__(29);\nexports.version = packageInfo.version;\nfunction createClient(workerPath) {\n    var worker = new Worker(workerPath);\n    return new client_class_1.XHRWorkerClient(worker);\n}\nexports.createClient = createClient;\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/index.client.ts\n// module id = 11\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/index.client.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar client_class_1 = __webpack_require__(5);\nvar client_class_2 = __webpack_require__(5);\nexports.XHRWorkerClient = client_class_2.XHRWorkerClient;\nvar packageInfo = __webpack_require__(29);\nexports.version = packageInfo.version;\nvar __WORKERS__ = new Map();\nfunction createClient(workerPath) {\n    if (workerPath === void 0) { workerPath = '/assets/worker.js'; }\n    if (!__WORKERS__.has(workerPath)) {\n        var worker = new client_class_1.XHRWorkerClient(new Worker(workerPath));\n        __WORKERS__.set(workerPath, worker);\n    }\n    return __WORKERS__.get(workerPath);\n}\nexports.createClient = createClient;\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/index.client.ts\n// module id = 11\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/index.client.ts?");
 
 /***/ }),
 /* 12 */
@@ -278,7 +278,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar Ob
 /* 29 */
 /***/ (function(module, exports) {
 
-eval("module.exports = {\"version\":\"0.0.0\"}\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/metadata.json\n// module id = 29\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/metadata.json?");
+eval("module.exports = {\"version\":\"0.0.2\"}\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/metadata.json\n// module id = 29\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/metadata.json?");
 
 /***/ })
 /******/ ]);
